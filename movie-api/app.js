@@ -375,7 +375,7 @@ app.delete('/movies/:id', (req, res) => {
 
 // =====================================
 // 10. TEMPORARY ERROR TEST ROUTE
-// Remove this route after testing
+// Adaded for testing purposes. Remove in production.
 // =====================================
 
 app.get('/test-error', (req, res, next) => {
@@ -384,7 +384,6 @@ app.get('/test-error', (req, res, next) => {
 
 // =====================================
 // 11. UNKNOWN ROUTE HANDLER (404)
-// Must be after all valid routes
 // =====================================
 
 app.use((req, res) => {
@@ -398,7 +397,6 @@ app.use((req, res) => {
 
 // =====================================
 // 12. ERROR HANDLING MIDDLEWARE
-// Must be after the 404 handler
 // =====================================
 
 app.use((err, req, res, next) => {
